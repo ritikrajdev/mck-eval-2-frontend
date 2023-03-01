@@ -51,7 +51,7 @@ export default function Card({ event, handleBookmarkButtonClick }) {
           </div>
 
           <button onClick={handleBookmarkButtonClick}>
-            {event.isRegistered ? (
+            {event.isBookmarked ? (
               <i className='bookmark fa-regular fa-bookmark' />
             ) : (
               <i className='bookmark fa-solid fa-bookmark' />
