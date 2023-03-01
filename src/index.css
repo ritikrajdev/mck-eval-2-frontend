@@ -33,3 +33,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.purple-button {
+  background-color: var(--white) !important;
+  color: var(--purple);
+  border-radius: 10px;
+  padding: 16px;
+}

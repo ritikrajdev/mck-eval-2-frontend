@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../../components/elements/Card';
-import { GET_ALL_EVENTS, UPDATE_BOOKMARK } from '../../constants/apiEndpoints';
+import { GET_ALL_EVENTS, UPDATE_EVENT } from '../../constants/apiEndpoints';
+import { EVENT_DESCRIPTION_ROUTE } from '../../constants/routes';
 import { makeRequest } from '../../utils/makeRequest';
 
 import './HomePage.css';
@@ -21,7 +22,7 @@ export default function HomePage() {
 
     const isBookmarked = allEvents[eventIdx].isBookmarked;
     try {
-      await makeRequest(UPDATE_BOOKMARK(eventId), {
+      await makeRequest(UPDATE_EVENT(eventId), {
         data: {
           isBookmarked: !isBookmarked,
         },
@@ -40,13 +41,20 @@ export default function HomePage() {
     <div className='body-padding'>
       <div className='cards'>
         {allEvents.map((event) => (
-          <Card
+          <div
             key={event.id}
-            event={event}
-            handleBookmarkButtonClick={() =>
-              handleBookmarkButtonClick(event.id)
-            }
-          />
+            onClick={() => {
+              navigate(EVENT_DESCRIPTION_ROUTE(event.id));
+            }}
+          >
+            <Card
+              event={event}
+              handleBookmarkButtonClick={(e) => {
+                e.stopPropagation();
+                handleBookmarkButtonClick(event.id);
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>

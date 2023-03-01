@@ -10,7 +10,11 @@ export const GET_ALL_EVENTS = {
   url: BASE_URL + '/api/events',
 };
 
-export const UPDATE_BOOKMARK = (id) => ({
+export const UPDATE_EVENT = (id) => ({
   url: BASE_URL + '/api/events/' + id,
   method: 'PATCH',
+});
+
+export const GET_EVENT_DETAIL = (id) => ({
+  url: BASE_URL + '/api/events/' + id,
 });
