@@ -1,0 +1,11 @@
+header {
+  background-color: var(--purple);
+  font-family: 'Big Shoulders Inline Display', sans-serif;
+  color: var(--white);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 5rem;
+}
