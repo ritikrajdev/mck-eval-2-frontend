@@ -18,3 +18,12 @@ export const UPDATE_EVENT = (id) => ({
 export const GET_EVENT_DETAIL = (id) => ({
   url: BASE_URL + '/api/events/' + id,
 });
+
+export const GET_ALL_THEMES = {
+  url: BASE_URL + '/api/themes',
+};
+
+export const SET_DEFAULT_THEME = {
+  url: BASE_URL + '/api/themes',
+  method: 'PUT',
+};

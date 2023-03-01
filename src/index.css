@@ -45,3 +45,18 @@ button {
   background-color: transparent;
   border: none;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app > * {
+  flex: none;
+}
+
+.app > main {
+  flex: 1;
+  padding-bottom: 1rem;
+}
