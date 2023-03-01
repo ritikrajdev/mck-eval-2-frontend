@@ -34,7 +34,7 @@ export const mockAllEvents = [
     venue: 'Gershwin Theatre, NYC, NY, USA',
     datetime: '2023-03-11T00:00:00.000Z',
     timezone: 'US/Eastern',
-    areSeatsAvailable: true,
+    areSeatsAvailable: false,
     isRegistered: false,
     isBookmarked: true,
     imgUrl:
