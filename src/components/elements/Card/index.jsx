@@ -120,7 +120,7 @@ export default function Card({
           <button onClick={handleBookmarkButtonClick}>
             {event.isBookmarked ? (
               <i
-                className='bookmark fa-regular fa-bookmark'
+                className='bookmark fa-solid fa-bookmark'
                 style={{
                   fontSize:
                     detailView && greaterThanRequiredWidth ? '3rem' : '1.5rem',
@@ -128,7 +128,7 @@ export default function Card({
               />
             ) : (
               <i
-                className='bookmark fa-solid fa-bookmark'
+                className='bookmark fa-regular fa-bookmark'
                 style={{
                   fontSize:
                     detailView && greaterThanRequiredWidth ? '3rem' : '1.5rem',
