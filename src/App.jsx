@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/elements/Header';
 import { ERROR_ROUTE, HOME_ROUTE } from './constants/routes';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
@@ -7,6 +8,7 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path={HOME_ROUTE} element={<HomePage />} />
         <Route path={`${ERROR_ROUTE}/:errorCode?`} element={<ErrorPage />} />

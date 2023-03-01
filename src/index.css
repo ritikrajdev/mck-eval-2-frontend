@@ -1,6 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@700&family=Big+Shoulders+Text:wght@700&family=Sofia+Sans:wght@400;700&display=swap');
+
+:root {
+  --purple: #800080;
+  --gray: #9b9999;
+  --white: #ffffff;
+  --yellow: #ececab;
+  --red: #ea8282;
+  --green: #a0f3ad;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.body-padding {
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 
 body {
