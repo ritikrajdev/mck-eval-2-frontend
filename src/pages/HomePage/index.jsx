@@ -16,6 +16,9 @@ export default function HomePage() {
 
   useEffect(() => {
     makeRequest(GET_ALL_EVENTS, {}, navigate).then((events) => {
+      events.sort(function (a, b) {
+        return new Date(a.datetime) - new Date(b.datetime);
+      });
       setAllEvents(events);
       setAllOriginalEvents(events);
     });
